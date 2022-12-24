@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextInput, View, Button } from 'react-native';
+import { TextInput, View, TouchableOpacity, Text } from 'react-native';
 import styles from './Input.style';
 
 const Input = () => {
@@ -12,11 +12,10 @@ const Input = () => {
                     selectionColor='#c0c0c0'
                 />
             </View>
-            <View style={styles.button_container}>
-                <Button
-                    title='Kaydet'
-
-                />
+            <View style={styles.touchOpacity_container}>
+                <TouchableOpacity >
+                    <Text style={styles.touchOpacity_text}>Kaydet</Text>
+                </TouchableOpacity>
             </View>
 
         </View>
