@@ -1,13 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { useState } from 'react';
 import { SafeAreaView, Text, StyleSheet } from 'react-native';
 import Input from './components/Input';
 
 const App = () => {
+
+  const [text, useText] = useState();
+
+
   return (
     <SafeAreaView style={styles.container}>
       <Input />
-      <StatusBar style='light'/>
+      <StatusBar style='light' />
     </SafeAreaView>
   )
 
