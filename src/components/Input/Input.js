@@ -3,11 +3,10 @@ import { TextInput, View, TouchableOpacity, Text } from 'react-native';
 import styles from './Input.style';
 
 
-const Input = () => {
-
-    const [isActiveBtn, setIsActiveBtn] = useState(false);
+const Input = ({ toDo, setToDo, addToDo, isActiveBtn, setIsActiveBtn }) => {
 
     const changeText = text => {
+        setToDo(text)
         text !== '' ? setIsActiveBtn(true) : setIsActiveBtn(false);
     }
 
@@ -20,9 +19,12 @@ const Input = () => {
                 selectionColor='#c0c0c0'
                 onChangeText={changeText}
                 style={styles.text_container}
+                value={toDo}
             />
 
-            <TouchableOpacity style={isActiveBtn ? styles.active_button : styles.normal_button}>
+            <TouchableOpacity
+                onPress={addToDo}
+                style={isActiveBtn ? styles.active_button : styles.normal_button}>
                 <Text style={styles.btn_text}>Kaydet</Text>
             </TouchableOpacity>
 

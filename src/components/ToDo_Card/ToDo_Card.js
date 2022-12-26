@@ -2,12 +2,12 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import styles from './ToDo_Card.style';
 
-const ToDo_Card = (props) => {
+const ToDo_Card = ({ data }) => {
 
     return (
 
         <View>
-            <Text>{props.data.action}</Text>
+            <Text>{data.action}</Text>
         </View>
     )
 }

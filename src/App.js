@@ -1,31 +1,36 @@
 import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { SafeAreaView, StyleSheet, FlatList } from 'react-native';
 import Input from './components/Input';
 import ToDo_Card from './components/ToDo_Card';
 
 const App = () => {
 
-  const List = [
-    {
-      id: 1,
-      action: 'Ev temizlenecek',
-    },
-    {
-      id: 2,
-      action: 'Yemek yapılacak',
-    }
-  ]
+  const [list, setList] = useState([]);
+
+  const [toDo, setToDo] = useState('');
+  const [isActiveBtn, setIsActiveBtn] = useState(false);
+
+  const addToDo = () => {
+    setList([...list, { action: toDo }]);
+    setToDo('');
+    setIsActiveBtn(false);
+  }
+
+  useEffect(() => {
+    console.log(list.length);
+  }, [list])
 
   const renderToDo = ({ item }) => <ToDo_Card data={item} />
+
 
   return (
     <SafeAreaView style={styles.container}>
       <FlatList
-        data={List}
+        data={list}
         renderItem={renderToDo}
       />
-      <Input />
+      <Input toDo={toDo} setToDo={setToDo} addToDo={addToDo} isActiveBtn={isActiveBtn} setIsActiveBtn={setIsActiveBtn} />
       <StatusBar style='light' />
     </SafeAreaView>
   )
