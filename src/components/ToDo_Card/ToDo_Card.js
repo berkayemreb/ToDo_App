@@ -6,8 +6,8 @@ const ToDo_Card = ({ data }) => {
 
     return (
 
-        <View>
-            <Text>{data.action}</Text>
+        <View style={styles.container}>
+            <Text style={styles.text}>{data.action}</Text>
         </View>
     )
 }
