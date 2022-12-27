@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { SafeAreaView, StyleSheet, FlatList } from 'react-native';
 import Input from './components/Input';
 import ToDo_Card from './components/ToDo_Card';
+import NumberOfAction from './components/NumberOfAction';
 
 const App = () => {
 
@@ -26,6 +27,7 @@ const App = () => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <NumberOfAction />
       <FlatList
         data={list}
         renderItem={renderToDo}
