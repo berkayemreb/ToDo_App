@@ -13,13 +13,17 @@ const App = () => {
   const [isActiveBtn, setIsActiveBtn] = useState(false);
 
   const addToDo = () => {
-    setList([...list, { action: toDo }]);
+    setList([...list, {
+      action: toDo,
+      id: list.length + 1,
+      isDone: false,
+    }]);
     setToDo('');
     setIsActiveBtn(false);
   }
 
   useEffect(() => {
-    console.log(list.length);
+    list.map(a => { console.log(a) })
   }, [list])
 
   const renderToDo = ({ item }) => <ToDo_Card data={item} />
@@ -27,7 +31,7 @@ const App = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <NumberOfAction />
+      <NumberOfAction list={list} />
       <FlatList
         data={list}
         renderItem={renderToDo}

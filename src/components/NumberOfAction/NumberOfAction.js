@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text } from 'react-native';
 import styles from './NumberOfAction.style';
 
-const NumberOfAction = () => {
+const NumberOfAction = ({ list }) => {
+
+    const counter = list.length;
+
     return (
         <View style={styles.container}>
             <Text style={styles.text}>Yapılacaklar</Text>
-            <Text style={styles.number}>0</Text>
+            <Text style={styles.number}>{counter}</Text>
         </View>
     )
 }
