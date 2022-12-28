@@ -4,12 +4,13 @@ import styles from './NumberOfAction.style';
 
 const NumberOfAction = ({ list }) => {
 
-    const counter = list.length;
+    const filterList = list.filter(element => { return !element.isDone }
+    )
 
     return (
         <View style={styles.container}>
             <Text style={styles.text}>Yapılacaklar</Text>
-            <Text style={styles.number}>{counter}</Text>
+            <Text style={styles.number}>{filterList.length}</Text>
         </View>
     )
 }

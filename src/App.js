@@ -8,7 +8,7 @@ import NumberOfAction from './components/NumberOfAction';
 const App = () => {
 
   const [list, setList] = useState([]);
-
+  
   const [toDo, setToDo] = useState('');
   const [isActiveBtn, setIsActiveBtn] = useState(false);
 
