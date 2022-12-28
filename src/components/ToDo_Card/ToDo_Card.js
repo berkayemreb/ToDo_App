@@ -1,14 +1,17 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import styles from './ToDo_Card.style';
 
-const ToDo_Card = ({ data }) => {
+const ToDo_Card = ({ data, completedToDo }) => {
 
     return (
-
-        <View style={styles.container}>
-            <Text style={styles.text}>{data.action}</Text>
-        </View>
+        <TouchableOpacity
+            onPress={() => { completedToDo(data.id) }}>
+            <View
+                style={styles.container}>
+                <Text style={styles.text}>{data.action}</Text>
+            </View>
+        </TouchableOpacity>
     )
 }
 

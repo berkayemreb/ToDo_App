@@ -22,11 +22,21 @@ const App = () => {
     setIsActiveBtn(false);
   }
 
+  const completedToDo = (id) => {
+    const newList = list.map(element => {
+      if (element.id == id) {
+        element.isDone = !element.isDone;
+      }
+      return element;
+    })
+    setList(newList);
+  }
+
   useEffect(() => {
-    list.map(a => { console.log(a) })
+    console.log(list);
   }, [list])
 
-  const renderToDo = ({ item }) => <ToDo_Card data={item} />
+  const renderToDo = ({ item }) => <ToDo_Card data={item} completedToDo={completedToDo} />
 
 
   return (
