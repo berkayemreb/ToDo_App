@@ -15,7 +15,7 @@ const App = () => {
   const addToDo = () => {
     setList([...list, {
       action: toDo,
-      id: Date.now() + Math.random(),
+      id: Math.random() + Date.now(),
       isDone: false,
     }]);
     setToDo('');
