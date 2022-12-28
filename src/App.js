@@ -37,9 +37,7 @@ const App = () => {
     setList(copyList);
   }
 
-  useEffect(() => {
-    console.log(list);
-  }, [list])
+  
 
   const renderToDo = ({ item }) => <ToDo_Card data={item} completedToDo={completedToDo} removeToDo={removeToDo} />
 
