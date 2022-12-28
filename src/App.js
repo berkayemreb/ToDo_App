@@ -8,14 +8,14 @@ import NumberOfAction from './components/NumberOfAction';
 const App = () => {
 
   const [list, setList] = useState([]);
-  
+
   const [toDo, setToDo] = useState('');
   const [isActiveBtn, setIsActiveBtn] = useState(false);
 
   const addToDo = () => {
     setList([...list, {
       action: toDo,
-      id: list.length + 1,
+      id: Date.now() + Math.random(),
       isDone: false,
     }]);
     setToDo('');
@@ -32,11 +32,16 @@ const App = () => {
     setList(newList);
   }
 
+  const removeToDo = (id) => {
+    const copyList = list.filter(element => element.id !== id)
+    setList(copyList);
+  }
+
   useEffect(() => {
     console.log(list);
   }, [list])
 
-  const renderToDo = ({ item }) => <ToDo_Card data={item} completedToDo={completedToDo} />
+  const renderToDo = ({ item }) => <ToDo_Card data={item} completedToDo={completedToDo} removeToDo={removeToDo} />
 
 
   return (

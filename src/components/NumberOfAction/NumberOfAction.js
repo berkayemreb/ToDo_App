@@ -4,8 +4,7 @@ import styles from './NumberOfAction.style';
 
 const NumberOfAction = ({ list }) => {
 
-    const filterList = list.filter(element => { return !element.isDone }
-    )
+    const filterList = list.filter(element => !element.isDone)
 
     return (
         <View style={styles.container}>
