@@ -8,8 +8,8 @@ const ToDo_Card = ({ data, completedToDo }) => {
         <TouchableOpacity
             onPress={() => { completedToDo(data.id) }}>
             <View
-                style={styles.container}>
-                <Text style={styles.text}>{data.action}</Text>
+                style={data.isDone ? styles.after_completed_container : styles.before_completed_container}>
+                <Text style={data.isDone ? styles.after_completed_text : styles.before_completed_text}>{data.action}</Text>
             </View>
         </TouchableOpacity>
     )
