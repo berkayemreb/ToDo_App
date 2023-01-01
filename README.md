@@ -10,18 +10,23 @@ It is a mobile app where we can ...
 
 ### The appearance when we first log in to the app 
 <img src="https://raw.githubusercontent.com/berkayemreb/ToDo_App/master/readme-images/normal-screen.png" alt="normal" width="150" height="300">
+<hr>
 
 ### The appearance when writing text in the input
 <img src="https://raw.githubusercontent.com/berkayemreb/ToDo_App/master/readme-images/write-input.png" alt="writing" width="150" height="300">
+<hr>
 
 ### The appearance after items have been added to the list 
 <img src="https://raw.githubusercontent.com/berkayemreb/ToDo_App/master/readme-images/items-add.png" alt="items_add" width="150" height="300">
+<hr>
 
 ### The appearance after the completed actions have been draw
 <img src="https://raw.githubusercontent.com/berkayemreb/ToDo_App/master/readme-images/items-draw.png" alt="items_draw" width="150" height="300">
+<hr>
 
 ### The appearance after <ins>holding down</ins> on the completed actions and removing them from the list
 <img src="https://raw.githubusercontent.com/berkayemreb/ToDo_App/master/readme-images/items-remove.png" alt="items_remove" width="150" height="300">
+
 
 -------------------------
 **<div align="center">NOTE</div>**
